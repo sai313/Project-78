@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Family Book</title>
+    </head>
+    <body style="background-color:chartreuse">
+        <center>
+            <img src="Family Book.jpg" id="img" height="500px"><br><br><br>
+            <p id="name">Family Book</p><br><br>
+            <button id="nextBtn" onclick="next()">Next</button>
+        </center>
+        <script>
+            var pictures = ["Family Book.jpg","Father.jpg","Mother.jpg","Sister.jpg","Brother.jpg"];
+            var family = ["Family Book","Father","Mother","Sister","Brother"];
+            var i = 1;
+            function next() {
+                if (i==5){
+                    i=0;
+                }
+                document.getElementById("img").src=pictures[i];
+                document.getElementById("name").innerHTML=family[i];
+                i++;
+            }
+        </script>
+    </body>
+</html>
